@@ -13,7 +13,7 @@ defineProps({
 
         <div>
             <div v-for="post in posts.data" :key="post.id" class="border-1 border-gray-300 p-4 mb-4">
-                {{ post.content }}
+                <div v-html="post.content"></div>
             </div>
         </div>
 
