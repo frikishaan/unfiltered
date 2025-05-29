@@ -36,7 +36,8 @@ class ProcessInboundEmail implements ShouldQueue
             return;
         }
 
-        // remove profanity from body
+        // remove profanity
+        $title = Blasp::check($this->inboundEmail->subject)->getCleanString();
         $content = Blasp::check($this->inboundEmail->htmlBody)->getCleanString();
 
         // sanitize html
@@ -44,6 +45,7 @@ class ProcessInboundEmail implements ShouldQueue
 
         //save to database
         $post = Post::create([
+            'title' => $title,
             'content' => $content
         ]);
 
