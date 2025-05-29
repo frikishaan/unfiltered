@@ -4,7 +4,7 @@
 
 Unfiltered is an **anonymous** inbox for the internet, where people share their thoughts, secrets, rants, regrets, and reviews, no sign-up required. Just email your thoughts to [share@unfiltered.frikishaan.com](mailto:share@unfiltered.frikishaan.com) and it will be published to the wall.
 
-This app is created for a hackathon on [Dev](https://dev.to/devteam/join-the-postmark-challenge-inbox-innovators-3000-in-prizes-497l).
+This app is created for a hackathon on [Dev](https://dev.to/challenges/postmark).
 
 ## Tech Stack
 
