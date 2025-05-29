@@ -1,18 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use Inertia\Inertia;
+use App\Http\Controllers\WallController;
 
-Route::get('/', function () {
-
-    if(! request()->hasHeader('X-Inertia') && request()->has('page')) {
-        return redirect()->route('wall');
-    }
-    
-    $posts = \App\Models\Post::latest()->paginate(10);
-
-    return Inertia::render('Wall', [
-        'posts' => Inertia::deepMerge($posts),
-    ]);
-})->name('wall');
-
+Route::get('/', WallController::class)->name('wall');
