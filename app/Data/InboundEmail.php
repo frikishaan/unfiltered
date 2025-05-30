@@ -32,12 +32,9 @@ class InboundEmail
 
     public function isSpam(): bool
     {
-        if($this->headers['X-Spam-Status'] == "Yes")
-        {
-            return true;
-        }
-
-        if((int)$this->headers['X-Spam-Score'] >= $this->spamThreshold)
+        if($this->headers['X-Spam-Status'] == "Yes" || 
+            (int)$this->headers['X-Spam-Score'] >= $this->spamThreshold
+        )
         {
             return true;
         }
